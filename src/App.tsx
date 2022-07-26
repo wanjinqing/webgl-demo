@@ -1,12 +1,16 @@
-import { useEffect } from "react";
-import { main } from "./code/line";
+import { useEffect, useRef } from "react";
+import { main } from "./code/texture";
 
 
 
 function App() {
+  const single = useRef(true);
   useEffect(() => {
-    main();
-  }, [])
+    if (single.current) {
+      single.current = false;
+      main();
+    }
+  }, [single])
 
   return (
     <canvas id="webgl" width="400" height="400">

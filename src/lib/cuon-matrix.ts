@@ -16,7 +16,7 @@
   
 // };
 export class Matrix4 {
-  elements: any;
+  elements: Float32Array;
   constructor(opt_src?: any) {
     var i, s, d;
     if (opt_src && typeof opt_src === 'object' && opt_src.hasOwnProperty('elements')) {
