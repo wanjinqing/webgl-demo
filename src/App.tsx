@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { main } from "./code/texture";
+import { main } from "./code/cube";
 
 
 
